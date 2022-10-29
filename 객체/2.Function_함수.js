@@ -19,3 +19,4 @@ for (i=0; i<0; i++) {
 
 function a1() {return 10; }
 a1(); //콘솔창에서는 10이 반환된다.
+윈도우 vscode test
