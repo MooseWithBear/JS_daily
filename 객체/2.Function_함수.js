@@ -9,7 +9,6 @@ function a () {console.log('a안녕')}
 const b = function() {console.log('b안녕')}
 const c = () => {console.log('c안녕')}
 const c1 = (x,y,z) => x*y*z // 중괄호, return값을 생략 가능하다.
-
 //^ 함수의 호출(실행)
 a(); // 함수 선언문 (function declaration statement)
 b(); // 함수 표현식(function expression)
@@ -72,3 +71,78 @@ const a7 = (x5,y5,z5) => {
 }
 var result = a7(2,3,4)
 console.log('result: ', result);
+//^ 함수 안에 다른 변수 사용하기 1.
+function minus1(x,y) {
+    var a = 100;
+    return (x-y)*a;
+}
+console.log('minus1: ', minus1(5,3));
+//^ 함수 안에 다른 변수 사용하기 2.
+var aa =100;
+function minus2(x,y) {
+    return (x-y)*aa;
+}
+console.log('minus2: ', minus2(5,1));
+
+// ** 상수(constant)?
+// 상수는 변하지 않는 변수
+// ** 리터럴(literal)? 
+// 리터럴은 변수의 값이 변하지 않는 고정데이터
+// ** 속성(property)?
+// 객체 내부에 사용되는 정보들을 속성이라 한다. (속성이름: 속성값)
+// ** 객체 리터럴(object literal)?
+// {}를 이용해 객체를 표현하는 것 (객체를 표현하는 방식 중 1가지)
+
+//^ 객체 리터럴 
+//형식
+// const 객체  = {
+//     속성이름1: 속성값1,
+//     속성이름2: 속성값2,
+//     속성이름3: 속성값3, //마지막에 쉼표를 사용해도 되며 속성을 추가되는 상황을 생각하면 넣는게 좋은 것 같다
+// }
+//잘못된 변수 저장의 예시
+const name = '보리';
+const year = 2005;
+const month = 8;
+const date = 10;
+const gender = 'M';
+//!위와 같이 따로따로 정보를 저장했을 때는 다른 사람의 정보를 추가로 표현할 때 변수를 사용할 수 없어진다.
+//! 때문에 객체를 사용한다면 여러 개의 변수를 하나로 묶을 수 있다.
+//객체 리터럴의 예시
+const bori = {
+    name : '보리',
+    year : '2005',
+    month : 8,
+    date : 12,
+    gender:'F',
+};
+//^ 속성값에 접근하는 방법
+//.(점)으로 접근하거나, 배열처럼 변수[속성]으로 접근 할 수 있다.
+//대표적으로 속성 이름에 띄어쓰기나 온점이 들어 있을 때 []을 사용하면 된다. //변수['속성.이름']
+console.log('bori: ', bori.name);
+console.log('bori: ', bori['name']);
+console.log('bori: ', bori.date);
+console.log('bori: ', bori['gender']);
+console.log('bori: ', bori['weight']);  //undefined
+//^ 객체 속성 수정하기
+//변수.속성 = 값;
+bori.gender = 'M';
+console.log('bori.gender: ', bori.gender);
+//^ 객체 속성 제거하기
+//delete 변수.속성;
+delete bori.gender;
+console.log('bori.gender: ', bori.gender);
+
+
+//** 배열과 함수가 객체인 이유 */
+//배열과 함수는 객체의 성질을 모두 다 사용할 수 있기 때문이다.
+//배열과 함수에도 속성들을 추가하거나 수정 및 제거할 수도 있다.
+//객체는 함수와 배열을 포함하는 개념이기 때문에 {}를 사용해 만든 객체를 리터럴이라고 따로 부르는 것.
+function hello99() {
+    hello99.a = 'really?';
+    var array = [];
+    array.b = 'wow';
+    console.log(hello99.a);
+    console.log(array.b);
+}hello99();
+//https://thebook.io/080270/part01/ch02/06/03-06/
