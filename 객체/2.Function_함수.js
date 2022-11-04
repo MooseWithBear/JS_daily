@@ -21,7 +21,6 @@ for (i=0; i<0; i++) {
 //^ return의 기능1 -> 값을 반환한다.
 function a1() {return 10; }
 a1(); //콘솔창에서는 10이 반환된다.
-<<<<<<< HEAD
 var B = a1();
 console.log('B: ', B); // 이 또한 10이 반환된다
 //^ return의 기능2 -> 함수의 실행을 중간에 멈춘다.
@@ -73,6 +72,3 @@ const a7 = (x5,y5,z5) => {
 }
 var result = a7(2,3,4)
 console.log('result: ', result);
-=======
-윈도우 vscode test
->>>>>>> origin/main
