@@ -146,3 +146,15 @@ function hello99() {
     console.log(array.b);
 }hello99();
 //https://thebook.io/080270/part01/ch02/06/03-06/
+//^ 메서드(method) 이해하기 
+// 속성값으로 js의 모든 값을 넣을 수 있다. 문자열,숫자,bool,null,undefined,함수,배열,다른객체 등
+// 객체의 속성값으로 함수가 들어간다면 이것은 메서드(method)라고 부른다.
+const debug = {
+    log:function(value) {
+        console.log('value: ', value);
+    },
+};
+debug.log('Hello, Method')
+debug.log()
+//여기서 log는 debug 객체의 메서드이며 이는 곧 console.log()의 console은 객체, log는 메서드가 되는 것과 같다.
+//이해는 아직 잘 안된다..
