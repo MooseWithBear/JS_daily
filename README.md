@@ -1,5 +1,5 @@
 # JS_daily
-daily study log
+JS daily learning log
 
 
 //공부 소스 
