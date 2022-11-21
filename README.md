@@ -2,5 +2,7 @@
 JS daily learning log
 
 
-//공부 소스 
-1. https://thebook.io/080270 (Let's Get IT 자바스크립트 프로그래밍 제로초)
+//Source
+1. https://thebook.io/080270 (Let's Get IT Javascript programming)
+2. https://paullab.co.kr/codefestival.html (JS 100 questions)
+3. fastcampus Frontend loadmap master
