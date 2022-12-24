@@ -17,3 +17,23 @@ function getWinNumbers () {
 }
 
 getWinNumbers();
+
+
+
+// for (let i = 0; i < drawNumbers; i++) {
+//     let number = Math.floor(Math.random() * allNumbers) + 1;
+
+//     // Ensure there are no duplicate numbers
+//     while (winNumbers.indexOf(number) !== -1) {
+//         number = Math.floor(Math.random() * allNumbers) + 1;
+//     }
+
+//     winNumbers.push(number);
+// }
+
+// winNumbers.sort((a, b) => a - b);
+
+// const bonusNumber = Math.floor(Math.random() * allNumbers) + 1;
+
+// console.log('winNumbers:', winNumbers);
+// console.log('bonusNumber:', bonusNumber);
