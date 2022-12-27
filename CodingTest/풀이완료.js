@@ -47,18 +47,30 @@
 // 038. 개미 군단
 // 039. 모음제거
 }
-//! 040. 분수의 덧셈....NO
+//! 040. 분수의 덧셈
 
 //^ 20221226
 // 041. n의 배수 고르기
 // 042. 세균 증식
-//! 043. 직각삼각형 출력하기...?
+//! 043. 직각삼각형 출력하기
 // 044. 대문자와 소문자
 // 045. 가위바위보
 // 046. 암호 해독
 // 047. 문자열 정렬하기 (1)
 // 048. 주사위의 개수
 // 049. 가장 큰 수 찾기
+// 050. 약수 구하기
+
+//^20221227
+// 051. 배열 회전시키기
+// 052. 외계행성의 나이
+// 053. 최댓값 만들기
+// 054. 최댓값 만들기 (2)
+//! 055. 피자 나눠 먹기 (2)
+//! 056. 인덱스 바꾸기
+// 057. 숫자찾기
+// 058. 369게임
+// 059. 문자열 정렬하기 (2)
 
 
 
@@ -79,31 +91,56 @@
 //     return answer;
 // }
 
-// tilde()
-// reduce()
-// Math.ceil()
-// const solution = dot => dot[0] > 0 ? dot[1] > 0 ? 1 : 4 : dot[1] > 0 ? 2 :3;
-// sort()
-// reverse()
-// sort((a,b) => a-b) 숫자 오름차순 공식..
-// let myString = pizza; return [...my_string] // 문자열을 배열로 치환
-// join("") //     return my_string.split('').reverse().join('');
-// const solution = num_list => {var answer = [0,0]; for (i of num_list) {answer[i%2] += 1; return answer}}
-// replaceAll()
-// split()
-// const solution = (my_string, letter) => my_string.split(letter).join('') --> letter element를 이용해서 split..
-// map()
-// repeat()
-// includes 와 filter 비교
-// isInteger() 정수판별
-// Math.sqrt(n) 제곱근  (return Number.isInteger(Math.sqrt(n)) ? 1 : 2;)
-// filter() 두배열 비교방법 const result = arr1.filter(x => !arr2.includes(x));
-// filter() 배열 같은 요소를 비교해서 새로운 배열로 출력함 result = s1.filter(x => s2.includes(x))
-// reduce()
-// replaceAll() ----> replaceAll(/[^\d]/g, '').split('') 문자는 공백으로 변환
-// replace()
-// 제곱의 세가지 종류 (x**y), (Math.pow(x, y)), (x*x)
+// *tilde()
+// *reduce()
+// *Math.ceil()
+// *const solution = dot => dot[0] > 0 ? dot[1] > 0 ? 1 : 4 : dot[1] > 0 ? 2 :3;
+// *sort()
+// *reverse()
+// *sort((a,b) => a-b) 숫자 오름차순 공식..
+// *let myString = pizza; return [...my_string] // 문자열을 배열로 치환
+// *join("") //     return my_string.split('').reverse().join('');
+// *const solution = num_list => {var answer = [0,0]; for (i of num_list) {answer[i%2] += 1; return answer}}
+// *replaceAll()
+// *split()
+// *const solution = (my_string, letter) => my_string.split(letter).join('') --> letter element를 이용해서 split..
+// *map()
+// *repeat()
+// *includes 와 filter 비교
+// *isInteger() 정수판별
+// *Math.sqrt(n) 제곱근  (return Number.isInteger(Math.sqrt(n)) ? 1 : 2;)
+// *filter() 두배열 비교방법 const result = arr1.filter(x => !arr2.includes(x));
+// *filter() 배열 같은 요소를 비교해서 새로운 배열로 출력함 result = s1.filter(x => s2.includes(x))
+// *reduce()
+// *replaceAll() ----> replaceAll(/[^\d]/g, '').split('') 문자는 공백으로 변환
+// *replace()
+// *제곱의 세가지 종류 (x**y), (Math.pow(x, y)), (x*x)
+// *indexOf()
+// *const alphabet = text.match(/[a-zA-Z]/g);
+// *shift() 첫번째를 뺌 / unshift() 첫번째에 추가 / push() 마지막에 추가/ pop() 마지막을 뺌
+// *Array.from, map()
+// *전개 연산자(spread operator)
+// * 배열순서를 새롭게 지정 [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
+// * split()과 slice()의 차이점
+
+
+// function solution(age) {
+//     let char = 'abcdefghij'
+//     return Array.from(age.toString()).map(t => char[+t]).join('');
+// }
+
+
+// const number = 123;
+// const digits = number.toString().split('').map(digit => parseInt(digit, 10));
+// console.log(digits); // [1, 2, 3]
+
+
 
 //^ 문제풀이 시 참고사항
 // 숫자를 배열로 변환 시에는 먼저 숫자->문자로 변환 후에야 split('')을 사용할 수 있다.
 // 문자를 숫자로 변환 시에는 ParseInt를 사용할 수 있다. 말 그대로 parsing integer
+// slice(),  concat()으로 배열 얕은복사가 가능하다.
+// 배열의 얕은복사는 slice(), concat()등으로 가능하다.
+// 객체의 얕은복사는 ..., 즉 (spread), assign({})
+// toUpperCase()는 문자열을 지정해야 변경 가능하다.
+// sort()는 배열을 지정해야 정렬 가능하다.
