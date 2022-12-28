@@ -91,18 +91,26 @@
 //     return answer;
 // }
 
-// *tilde()
-// *reduce()
+// *tilde() 
+//-> ~, ~~ 비트연산자
+// *reduce() 
+//-> map()과 함께 배열에 다양하게 활용할 수 있는 함수.
+//-> https://www.zerocho.com/category/JavaScript/post/5acafb05f24445001b8d796d
 // *Math.ceil()
+//-> 소수점 숫자를 올림하여 리턴하는 함수.
 // *const solution = dot => dot[0] > 0 ? dot[1] > 0 ? 1 : 4 : dot[1] > 0 ? 2 :3;
 // *sort()
+//-> 문자열의 UTF-16 기준으로 배열 내 string 인자들을 정렬한다. (숫자를 정렬해야할 때는 )
+//-> 원 배열이 정렬되므로 얕은 복사를 하여 sort를 사용해야 원 배열데이터를 보호할 수 있다.
 // *reverse()
 // *sort((a,b) => a-b) 숫자 오름차순 공식..
+//-> https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 // *let myString = pizza; return [...my_string] // 문자열을 배열로 치환
 // *join("") //     return my_string.split('').reverse().join('');
 // *const solution = num_list => {var answer = [0,0]; for (i of num_list) {answer[i%2] += 1; return answer}}
 // *replaceAll()
 // *split()
+//-> 문자열을 주어진 인수기준으로 나눈 후 배열로 출력한다.
 // *const solution = (my_string, letter) => my_string.split(letter).join('') --> letter element를 이용해서 split..
 // *map()
 // *repeat()
