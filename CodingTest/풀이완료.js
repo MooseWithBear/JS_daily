@@ -72,11 +72,18 @@
 // 058. 369게임
 // 059. 문자열 정렬하기 (2)
 
+//^20221228
+// 058. 모스 부호 (1)
+// 059. A로 B만들기
+// 060. k의 개수
 
 
 
 
-
+//!꼭 공부하고 넘어가야하는 함수
+// filter -> filter(m => m === k)
+// map ->
+// split의 활용 극대화
 
 
 
@@ -130,6 +137,8 @@
 // *전개 연산자(spread operator)
 // * 배열순서를 새롭게 지정 [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
 // * split()과 slice()의 차이점
+// * reduce()     return letter.split(' ').reduce((prev, curr) => prev + morse[curr], '')
+
 
 
 // function solution(age) {
