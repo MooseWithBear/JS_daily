@@ -52,7 +52,7 @@
 //^ 20221226
 // 041. n의 배수 고르기
 // 042. 세균 증식
-//! 043. 직각삼각형 출력하기
+// 043. 직각삼각형 출력하기 // 20221230
 // 044. 대문자와 소문자
 // 045. 가위바위보
 // 046. 암호 해독
@@ -66,8 +66,8 @@
 // 052. 외계행성의 나이
 // 053. 최댓값 만들기
 // 054. 최댓값 만들기 (2)
-//! 055. 피자 나눠 먹기 (2)
-//! 056. 인덱스 바꾸기
+// 055. 피자 나눠 먹기 (2) //20221230
+// 056. 인덱스 바꾸기 //20221230
 // 057. 숫자찾기
 // 058. 369게임
 // 059. 문자열 정렬하기 (2)
@@ -77,6 +77,23 @@
 // 059. A로 B만들기
 // 060. k의 개수
 
+//^20221230
+// 061. 7의 개수
+// 062. 잘라서 배열로 저장하기
+// 063. 진료순서 정하기
+// 043. 직각삼각형 출력하기
+// 055. 피자 나눠 먹기 (2)
+// 056. 인덱스 바꾸기
+// 064. 합성수 찾기
+//! 065. 중복된 문자 제거\
+//! 066. 팩토리얼
+//! 067. 2차원으로 만들기
+//! 068. 가까운 수
+//! 069. 한 번만 등장한 문자
+//! 070. 이진수 더하기
+// 071. 숨어있는 숫자의 덧셈 (2)
+
+
 
 
 
@@ -84,7 +101,7 @@
 // filter -> filter(m => m === k)
 // map ->
 // split의 활용 극대화
-
+// ES6에서 추가된 기능인 구조 분해 할당은
 
 
 
@@ -138,13 +155,21 @@
 // * 배열순서를 새롭게 지정 [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
 // * split()과 slice()의 차이점
 // * reduce()     return letter.split(' ').reduce((prev, curr) => prev + morse[curr], '')
+// * 
+// function solution(my_str, n) {
+//   return my_str.match(new RegExp(`.{1,${n}}`, "g"));
+// }
 
+//* function removeDuplicates(arr) {Array.from(new Set(arr));}
+//* function removeDuplicates(arr) {arr.filter((item, index) => arr.indexOf(item) === index)}
+//* function hasDuplicates(arr) {(nuw Set(arr)).size !== arr.length}
 
 
 // function solution(age) {
 //     let char = 'abcdefghij'
 //     return Array.from(age.toString()).map(t => char[+t]).join('');
 // }
+//* repeat()
 
 
 // const number = 123;
@@ -161,3 +186,5 @@
 // 객체의 얕은복사는 ..., 즉 (spread), assign({})
 // toUpperCase()는 문자열을 지정해야 변경 가능하다.
 // sort()는 배열을 지정해야 정렬 가능하다.
+// for문도 while문과 같이 반복횟수제한을 없애고 싶다면, for(i=0; ; i++) {} 방법으로도 가능하다.
+// 구조분해할당을 사용시에는 바로 위 코드의 ; 사용에 주의한다.

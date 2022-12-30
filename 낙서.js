@@ -1,3 +1,3 @@
-let sides = [1,1000,69]
-sides.sort((a,b) => a-b)
-console.log('sides.sort((a,b) => a-b): ', sides.sort((a,b) => a-b));
+let arr = [1,2,3,4,5,6,1,3]
+console.log(new Set(arr).size)
+console.log(arr)
