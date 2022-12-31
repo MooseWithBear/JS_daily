@@ -92,7 +92,9 @@
 //! 069. 한 번만 등장한 문자
 //! 070. 이진수 더하기
 // 071. 숨어있는 숫자의 덧셈 (2)
-
+// 072. 다음에 올 숫자
+// 073. 소인수분해
+// 074. 외계어 사전
 
 
 
@@ -162,7 +164,7 @@
 
 //* function removeDuplicates(arr) {Array.from(new Set(arr));}
 //* function removeDuplicates(arr) {arr.filter((item, index) => arr.indexOf(item) === index)}
-//* function hasDuplicates(arr) {(nuw Set(arr)).size !== arr.length}
+//* function hasDuplicates(arr) {(new Set(arr)).size !== arr.length}
 
 
 // function solution(age) {
