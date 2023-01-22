@@ -1,7 +1,6 @@
 // https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&page=1&levels=0&languages=javascript
 //! 난이도 : Lv.0 (total : 100 questions)
 //? 남은 문제
-// 086. 삼각형의 완성조건 (2)
 // 087. 캐릭터의 좌표
 // 088. 직사각형 넓이 구하기
 // 089. 치킨 쿠폰
@@ -138,6 +137,9 @@
 // 070. 이진수 더하기
 // 082. 공던지기
 }
+
+//^
+// 086. 삼각형의 완성조건 (2) // 20230122
 
 
     // total이 짝수, num이 홀수라면 num으로 나눈 값이 중간값이 된다.(가우스) + 중간값
