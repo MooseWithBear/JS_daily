@@ -60,15 +60,3 @@
 //& 참고사항
 // 문자에 * / 연산을 하면 쉽게 숫자형으로 형변환되어 반환한다.
 // substring()은 모두 lowercase 이다.
-//window sourcetree git test
-//holiday
-//holiday
-//holiday
-//covid..
-//covid..
-//covid
-//covid
-//covid
-//covid
-//covid
-//covid 
