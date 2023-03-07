@@ -47,14 +47,25 @@ solution(wallpaper)
 
 //! ChatGPT의 제안
 
-// 다음은 코드를 간결하게 변경한 것입니다. 주요 변경 사항은 다음과 같습니다.
+//^ 1. 다음은 리팩토링한 코드입니다. 주요 변경 사항은 다음과 같습니다.
 
-// wallpaperArr 배열을 const 대신 let으로 선언하고, 배열 리터럴에서 배열 요소를 바로 입력합니다.
-// verticalArray 배열 대신에 Array.prototype.flatMap() 메서드를 사용하여 세로 방향의 위치 정보를 배열로 추출합니다.
-// Array.prototype.reduce() 메서드를 사용하여 좌우 방향의 최소/최대 위치를 계산합니다.
-// 객체 리터럴을 사용하여 top, left, bottom, right 값을 반환합니다.
+    /*
+    함수 인자로 전달된 wallpaper 배열을 사용하지 않고, 대신 전역 변수로 선언된 wallpaper 배열을 사용합니다. 함수와 변수의 이름이 같아서 이름 충돌이 발생하는 것 같으므로, 함수 이름을 getWallpaperInfo로 변경합니다.
+    변수명을 직관적으로 변경합니다. 예를 들어, a1, a2, a3, a4 변수를 각각 top, left, bottom, right로 변경합니다.
+    Array.at() 대신에 배열의 인덱스를 직접 참조합니다.
+    console.log()를 제거합니다.
+    */
 
-/* 
+//^ 2. 다음은 코드를 간결하게 변경한 것입니다. 주요 변경 사항은 다음과 같습니다.
+
+    /*
+    wallpaperArr 배열을 const 대신 let으로 선언하고, 배열 리터럴에서 배열 요소를 바로 입력합니다.
+    verticalArray 배열 대신에 Array.prototype.flatMap() 메서드를 사용하여 세로 방향의 위치 정보를 배열로 추출합니다.
+    Array.prototype.reduce() 메서드를 사용하여 좌우 방향의 최소/최대 위치를 계산합니다.
+    객체 리터럴을 사용하여 top, left, bottom, right 값을 반환합니다.
+    */
+
+    /* 
 let wallpaperArr = [
   "..........",
   ".....#....",
