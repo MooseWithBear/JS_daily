@@ -46,6 +46,14 @@ solution(wallpaper)
 
 
 //! ChatGPT의 제안
+
+// 다음은 코드를 간결하게 변경한 것입니다. 주요 변경 사항은 다음과 같습니다.
+
+// wallpaperArr 배열을 const 대신 let으로 선언하고, 배열 리터럴에서 배열 요소를 바로 입력합니다.
+// verticalArray 배열 대신에 Array.prototype.flatMap() 메서드를 사용하여 세로 방향의 위치 정보를 배열로 추출합니다.
+// Array.prototype.reduce() 메서드를 사용하여 좌우 방향의 최소/최대 위치를 계산합니다.
+// 객체 리터럴을 사용하여 top, left, bottom, right 값을 반환합니다.
+
 /* 
 let wallpaperArr = [
   "..........",
