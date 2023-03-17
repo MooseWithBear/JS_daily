@@ -305,6 +305,9 @@
 // solution(lines)
 
 
+
+//! 다른사람의 풀이에서 본 간단한 코드
+
 const lines1 = [[1,2], [1,6], [-7,6]]
 function solution(lines1) {
     let line = new Array(200).fill(0);
@@ -318,3 +321,40 @@ function solution(lines1) {
 }
 
 solution(lines1)
+
+
+//! GPT의 풀이분석
+
+/*
+해당 코드는 먼저, 선의 시작점과 끝점을 입력으로 받는 배열 lines를 인자로 받습니다.
+
+javascript
+Copy code
+function solution(lines) {
+  // code here
+}
+이후, line이라는 길이가 200인 배열을 생성합니다.
+
+javascript
+Copy code
+let line = new Array(200).fill(0);
+그리고 lines 배열에서 하나씩 꺼내어 시작점(a)과 끝점(b)을 추출하고, 이 두 점 사이의 위치에 해당하는 line 배열의 값을 증가시킵니다. 이 과정에서 for문을 사용합니다.
+
+javascript
+Copy code
+lines.forEach(([a, b]) => {
+  for (; a < b; a++) line[a + 100]++;
+});
+위 코드에서 forEach 메소드는 lines 배열에서 원소를 하나씩 꺼내어, [a, b] 형태로 분해(destructuring)한 뒤, 그 안에서 a는 시작점, b는 끝점을 의미합니다. 이후, for문을 사용하여 line 배열의 인덱스를 a + 100으로 설정하고 해당 값을 증가시킵니다.
+
+이를 통해, line 배열에서 인덱스가 a+100인 곳부터 b+99인 곳까지 해당 선이 지나가는 부분에 대해 1씩 더해진 값을 가지게 됩니다.
+
+마지막으로, line 배열에서 두 번 이상 겹치는 부분의 개수를 반환합니다. 이때, reduce 메소드를 사용합니다. reduce 메소드는 line 배열의 모든 요소를 순회하면서, 누적값인 a와 현재 요소인 c를 가지고 조건문을 실행합니다. 이를 통해, line 배열에서 값이 2 이상인 요소의 개수를 반환합니다.
+
+javascript
+Copy code
+return line.reduce((a, c) =>  c > 1 ? a + 1 : a, 0)
+위 코드에서 reduce 메소드의 초기값은 0입니다. reduce 메소드에서 c > 1인 경우 누적값 a에 1을 더해주고, 그렇지 않은 경우는 a를 반환합니다. 이를 통해, line 배열에서 값이 2 이상인 요소의 개수를 반환합니다.
+
+따라서, 해당 코드는 lines 배열에서 각 선의 시작점과 끝점 사이를 촘촘하게 채운 line 배열에서 값이 2 이상인 요소의 개수를 반환하는 코드입니다.
+*/
