@@ -77,3 +77,33 @@
     위에서 설명한 특수문자 이외에도 다양한 특수문자가 존재하며, 이를 조합하여 다양한 패턴을 만들어낼 수 있습니다.
     */
 
+// 5. 예시 
+    // 정규표현식 활용 예시 1) (https://school.programmers.co.kr/learn/courses/30/lessons/120956/solution_groups?language=javascript)
+        function solution(babbling) {
+            var answer = 0;
+            const regex = /^(aya|ye|woo|ma)+$/;
+        
+            babbling.forEach(word => {
+            if (regex.test(word)) answer++;  
+            })
+        
+            return answer;
+        }
+
+    /*
+    해당 코드는 입력된 문자열 배열 babbling에서 일정한 패턴을 갖는 문자열의 개수를 반환하는 함수입니다.
+        - `var answer = 0;` : //~ 결과값을 저장하기 위한 변수 answer를 0으로 초기화합니다.
+        - `const regex = /^(aya|ye|woo|ma)+$/;` : //~ 검사할 문자열이 특정한 패턴을 가지고 있는지 확인하기 위한 정규표현식을 정의합니다. 해당 정규표현식은 "aya", "ye", "woo", "ma" 중 하나가 반복해서 등장하는 문자열에만 매치됩니다. ^는 문자열의 시작을, $는 문자열의 끝을 나타내며, ()는 그룹을 나타냅니다.
+        - `babbling.forEach(word => { ... })`: //~ 입력된 문자열 배열 babbling을 순회하며 각 문자열이 정규표현식 regex에 매치되는지 검사합니다. forEach() 메소드는 각 요소에 대해 콜백 함수를 실행합니다. 이때 콜백 함수의 인자 word는 각 요소의 값인 문자열입니다.
+        - `if (regex.test(word)) answer++;`: //~ 각 문자열 word가 정규표현식 regex에 매치되는지 검사합니다. test() 메소드는 정규표현식과 매개변수로 주어진 문자열이 매치되는지 여부를 반환합니다. 매치되면 answer 값을 1 증가시킵니다.
+        - `return answer;`: //~ 각 문자열에 대한 검사를 모두 마친 후, answer 값을 반환합니다. 이 값은 정규표현식에 매치되는 문자열의 개수입니다.
+    */
+
+    /*
+        - `^`: 문자열의 시작을 의미합니다.
+        - `(aya|ye|woo|ma)`: 괄호 안의 |는 OR 연산자로, aya, ye, woo, ma 중 하나에 매치됨을 의미합니다. 즉, 이 부분은 "aya", "ye", "woo", "ma" 중 하나가 매치됨을 나타냅니다.
+        - `+`: 바로 앞에 나온 패턴이 1회 이상 반복됨을 의미합니다.
+        - `$`: 문자열의 끝을 의미합니다.
+        
+        따라서 /^(aya|ye|woo|ma)+$/ 정규표현식은 "aya", "ye", "woo", "ma" 중 하나가 반복해서 등장하는 문자열에만 매치됩니다. 예를 들어, "aya", "wooaya", "mamama"와 같은 문자열은 매치되지만 "ayaya", "hello"와 같은 문자열은 매치되지 않습니다.
+    */
