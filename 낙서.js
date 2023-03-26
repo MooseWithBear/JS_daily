@@ -1,1 +1,1 @@
-console.log(toString(1e1));
+console.log(totring(1e1));
