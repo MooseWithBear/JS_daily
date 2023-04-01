@@ -30,6 +30,7 @@ while(sorting.length > 1){
 
 
 
+
 if(numlist.indexOf(n) === -1) {
     console.log('result: ', result);
     return
